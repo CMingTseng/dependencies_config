@@ -1,0 +1,78 @@
+//Ref : https://mvnrepository.com/search?q=androidx.arch.core
+//Ref : https://mvnrepository.com/search?q=androidx.lifecycle
+//Ref : https://mvnrepository.com/search?q=androidx.paging
+//Ref : https://mvnrepository.com/search?q=androidx.room
+//Ref : https://mvnrepository.com/search?q=androidx.sqlite
+//Ref : https://mvnrepository.com/search?q=androidx.navigation
+//Ref : https://mvnrepository.com/search?q=androidx.work
+//Ref : https://mvnrepository.com/search?q=androidx.databinding
+//Ref : https://developer.android.com/jetpack/androidx/migrate/artifact-mappings
+//Ref : https://blog.csdn.net/Kenway090704/article/details/76930451
+ext {
+    //    How to Use ?
+//   implementation 'androidx.arch.core:core-common:2.2.0'  --->  implementation rootProject.ext.dependencies["arch-core-common"]
+    coreVersion = '2.1.0'
+    lifecycleVersion = '2.2.0'
+    pagingVersion = '2.1.2'
+    roomVersion = '2.2.5'
+    roomAlphaVersion = '2.1.0-alpha04'
+    sqliteVersion = '2.1.0'
+    navigationVersion = '2.2.1'
+    workVersion = '2.3.4'
+    databindingVersion = '3.6.1'
+    architecture = [//FIXME can not use dependencies -- If use over two ext the dependencies will override !!
+            "arch-core-common" : "androidx.arch.core:core-common:$coreVersion",
+            "arch-core" : "androidx.arch.core:core:$coreVersion",
+            "arch-core-testing" : "androidx.arch.core:core-testing:$coreVersion",
+            "arch-core-runtime" : "androidx.arch.core:core-runtime:$coreVersion",
+            "lifecycle-common" : "androidx.lifecycle:lifecycle-common:$lifecycleVersion",
+            "lifecycle-common-java8" : "androidx.lifecycle:lifecycle-common-java8:$lifecycleVersion",
+            "lifecycle-compiler" : "androidx.lifecycle:lifecycle-compiler:$lifecycleVersion",
+            "lifecycle-extensions" : "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion",
+            "lifecycle-livedata" : "androidx.lifecycle:lifecycle-livedata:$lifecycleVersion",
+            "lifecycle-livedata-core" : "androidx.lifecycle:lifecycle-livedata-core:$lifecycleVersion",
+            "lifecycle-reactivestreams" : "androidx.lifecycle:lifecycle-reactivestreams:$lifecycleVersion",
+            "lifecycle-runtime" : "androidx.lifecycle:lifecycle-runtime:$lifecycleVersion",
+            "lifecycle-viewmodel" : "androidx.lifecycle:lifecycle-viewmodel:$lifecycleVersion",
+            "lifecycle-viewmodel-ktx" : "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion",
+            "lifecycle-livedata-ktx" : "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion",
+            "lifecycle-viewmodel-savedstate" : "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycleVersion",
+            "lifecycle-runtime-ktx" : "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion",
+            "paging-common" : "androidx.paging:paging-common:$pagingVersion",
+            "paging-runtime" : "androidx.paging:paging-runtime:$pagingVersion",
+            "paging-rxjava2" : "androidx.paging:paging-rxjava2:$pagingVersion",
+            "paging-runtime-ktx" : "androidx.paging:paging-runtime-ktx:$pagingVersion",
+            "paging-rxjava2-ktx" : "androidx.paging:paging-rxjava2-ktx:$pagingVersion",
+            "paging-common-ktx" : "androidx.paging:paging-common-ktx:$pagingVersion",
+            "room-common" : "androidx.room:room-common:$roomVersion",
+            "room-compiler" : "androidx.room:room-compiler:$roomVersion",
+            "room-guava" : "androidx.room:room-guava:$roomVersion",
+            "room-migration" : "androidx.room:room-migration:$roomVersion",
+            "room-runtime" : "androidx.room:room-runtime:$roomVersion",
+            "room-rxjava2" : "androidx.room:room-rxjava2:$roomVersion",
+            "room-testing" : "androidx.room:room-testing:$roomVersion",
+            "room-ktx" : "androidx.room:room-ktx:$roomVersion",
+            "room-testing" : "androidx.room:room-coroutines:$roomAlphaVersion",
+            "sqlite" : "androidx.sqlite:sqlite:$sqliteVersion",
+            "sqlite-framework" : "androidx.sqlite:sqlite-framework:$sqliteVersion",
+            "sqlite-ktx" : "androidx.sqlite:sqlite-ktx:$sqliteVersion",
+            "navigation-runtime" : "androidx.navigation:navigation-runtime:$navigationVersion",
+            "navigation-common" : "androidx.navigation:navigation-common:$navigationVersion",
+            "navigation-ui" : "androidx.navigation:navigation-ui:$navigationVersion",
+            "navigation-fragment" : "androidx.navigation:navigation-fragment:$navigationVersion",
+            "navigation-fragment-ktx" : "androidx.navigation:navigation-fragment-ktx:$navigationVersion",
+            "navigation-ui-ktx" : "androidx.navigation:navigation-ui-ktx:$navigationVersion",
+            "navigation-common-ktx" : "androidx.navigation:navigation-common-ktx:$navigationVersion",
+            "navigation-runtime-ktx" : "androidx.navigationnavigation-runtime-ktx:$navigationVersion",
+            "navigation-testing" : "androidx.navigation:navigation-testing:$navigationVersion",
+            "navigation-safe-args-generator" : "androidx.navigation:navigation-safe-args-generator:$navigationVersion",
+            "navigation-safe-args-gradle-plugin" : "androidx.navigation:navigation-safe-args-gradle-plugin:$navigationVersion",
+            "navigation-dynamic-features-runtime" : "androidx.navigation:navigation-dynamic-features-runtime:$navigationVersion",
+            "navigation-dynamic-features-fragment" : "androidx.navigation:navigation-dynamic-features-fragment:$navigationVersion",
+            "work-testing" : "androidx.work:work-testing:$workVersion",
+            "work-firebase" : "androidx.work:work-gcm:$workVersion",
+            "work-rxjava2" : "androidx.work:work-rxjava2:$workVersion",
+            "work-runtime-ktx" : "androidx.work:work-runtime-ktx:$workVersion",
+            "work-runtime" : "androidx.work:work-runtime:$workVersion"
+    ]
+}

@@ -1,0 +1,71 @@
+//Ref : https://mvnrepository.com/artifact/android.arch
+//Ref : https://mvnrepository.com/artifact/com.android.databinding
+//Ref : https://developer.android.com/jetpack/androidx/migrate/artifact-mappings
+//Ref : https://blog.csdn.net/Kenway090704/article/details/76930451
+ext {
+    //    How to Use ?
+//   implementation 'android.arch.core:common:1.0.0'  --->  implementation rootProject.ext.dependencies["arch-core-common"]
+    coreVersion = '1.1.1'
+    lifecycleVersion = '1.1.1'
+    pagingVersion = '1.0.1'
+    roomVersion = '1.1.1'
+    roomAlphaVersion = '1.0.0-alpha9-1'
+    roomAlpha2Version = '1.0.0-alpha9'
+    sqliteVersion = '1.1.1'
+    sqlbriteVersion = '1.1.2'
+    navigationVersion = '1.0.0'
+    workVersion = '1.0.1'
+    databindingVersion = '2.3.0'
+    architecture = [//FIXME can not use dependencies -- If use over two ext the dependencies will override !!
+            "arch-core-common" : "android.arch.core:common:$coreVersion",
+            "arch-core" : "android.arch.core:core:$coreVersion",
+            "arch-core-testing" : "android.arch.core:core-testing:$coreVersion",
+            "arch-core-runtime" : "android.arch.core:runtime:$coreVersion",
+
+            "lifecycle-common" : "android.arch.lifecycle:common:$lifecycleVersion",
+            "lifecycle-common-java8" : "android.arch.lifecycle:common-java8:$lifecycleVersion",
+            "lifecycle-compiler" : "android.arch.lifecycle:compiler:$lifecycleVersion",
+            "lifecycle-extensions" : "android.arch.lifecycle:extensions:$lifecycleVersion",
+            "lifecycle-livedata" : "android.arch.lifecycle:livedata:$lifecycleVersion",
+            "lifecycle-livedata-core" : "android.arch.lifecycle:livedata-core:$lifecycleVersion",
+            "lifecycle-reactivestreams" : "android.arch.lifecycle:reactivestreams:$lifecycleVersion",
+            "lifecycle-runtime" : "android.arch.lifecycle:runtime:$lifecycleVersion",
+            "lifecycle-viewmodel" : "android.arch.lifecycle:viewmodel:$lifecycleVersion",
+
+            "paging-common" : "android.arch.paging:common:$pagingVersion",
+            "paging-runtime" : "android.arch.paging:runtime:$pagingVersion",
+            "paging-rxjava2" : "android.arch.paging:rxjava2:$pagingVersion",
+
+            "room-common" : "android.arch.persistence.room:common:$coreVersion",
+            "room-compiler" : "android.arch.persistence.room:compiler:$coreVersion",
+            "room-guava" : "android.arch.persistence.room:guava:$coreVersion",
+            "room-migration" : "android.arch.persistence.room:migration:$coreVersion",
+            "room-runtime" : "android.arch.persistence.room:runtime:$coreVersion",
+            "room-rxjava2" : "android.arch.persistence.room:rxjava2:$coreVersion",
+            "room-testing" : "android.arch.persistence.room:testing:$coreVersion",
+            "room-db" : "android.arch.persistence.room:db:$roomAlphaVersion",
+            "room-support-db-impl" : "android.arch.persistence.room:support-db-impl:$roomAlpha2Version",
+            "room-db-impl" : "android.arch.persistence.room:db-impl:$roomAlphaVersion",
+            "sqlite" : "android.arch.persistence:db:$coreVersion",
+            "sqlite-framework" : "android.arch.persistence:db-framework:$coreVersion",
+            "sqlbrite-wcdb-integration" : "android.arch.persistence.db.wcdb:sqlbrite-wcdb-integration:$sqlbriteVersion",
+            "sqlbrite-sqlcipher-integration" : "android.arch.persistence.db.sqlcipher:sqlbrite-sqlcipher-integration:$sqlbriteVersion",
+            "navigation-runtime" : "android.arch.navigation:navigation-runtime:$navigationVersion",
+            "navigation-common" : "android.arch.navigation:navigation-common:$navigationVersion",
+            "navigation-ui" : "android.arch.navigation:navigation-ui:$navigationVersion",
+            "navigation-fragment" : "android.arch.navigation:navigation-fragment:$navigationVersion",
+            "navigation-fragment-ktx" : "android.arch.navigation:navigation-fragment-ktx:$navigationVersion",
+            "navigation-ui-ktx" : "android.arch.navigation:navigation-ui-ktx:$navigationVersion",
+            "navigation-common-ktx" : "android.arch.navigation:navigation-common-ktx:$navigationVersion",
+            "navigation-runtime-ktx" : "android.arch.navigation:navigation-runtime-ktx:$navigationVersion",
+            "navigation-testing" : "android.arch.navigation:navigation-testing:$navigationVersion",
+            "navigation-safe-args-generator" : "android.arch.navigation:navigation-safe-args-generator:$navigationVersion",
+            "navigation-safe-args-gradle-plugin" : "android.arch.navigation:navigation-safe-args-gradle-plugin:$navigationVersion",
+            "navigation-testing-ktx" : "android.arch.navigation:navigation-testing-ktx:$navigationVersion",
+            "work-testing" : "android.arch.work:work-testing:$workVersion",
+            "work-firebase" : "android.arch.work:work-firebase:$workVersion",
+            "work-rxjava2" : "android.arch.work:work-rxjava2:$workVersion",
+            "work-runtime-ktx" : "android.arch.work:work-runtime-ktx:$workVersion",
+            "work-runtime" : "android.arch.work:work-runtime:$workVersion"
+    ] 
+}

@@ -1,0 +1,33 @@
+//Ref : https://mvnrepository.com/artifact/com.android.support.test
+//Ref : https://developer.android.com/jetpack/androidx/migrate/artifact-mappings
+//Ref : https://blog.csdn.net/Kenway090704/article/details/76930451
+ext {
+    //    How to Use ?
+//    testImplementation 'junit:junit:4.12'  --->  testImplementation rootProject.ext.dependencies["junit"]
+//    androidTestImplementation 'com.android.support.test:runner:1.0.2'  --->  androidTestImplementation rootProject.ext.dependencies["test-runner"]
+//    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.2.0'  --->  androidTestImplementation rootProject.ext.dependencies["espresso-core"]
+    generalJunitVersion = '4.12'
+    supportTestVersion = '1.0.2'
+    supportEspressoVersion = '3.0.2'
+    test = [ //FIXME can not use dependencies -- If use over two ext the dependencies will override !!
+            "junit" :   "junit:junit:$generalJunitVersion",
+//            "test-junit": "support.test.ext:junit:$supportTestVersion",
+            "test-jank": "com.android.support.test.janktesthelper:janktesthelper:$supportTestVersion",
+            "test-services": "com.android.support.test.services:test-services:$supportTestVersion",
+            "test-uiautomator": "com.android.support.test.uiautomator:uiautomator:$supportTestVersion",
+            "test-monitor": "com.android.support.test:monitor:$supportTestVersion",
+            "test-orchestrator": "com.android.support.test:orchestrator:$supportTestVersion",
+            "test-rules": "com.android.support.test:rules:$supportTestVersion",
+            "test-runner": "com.android.support.test:runner:$supportTestVersion",
+
+            "espresso-core": "com.android.support.test.espresso:espresso-core:$supportEspressoVersion",
+            "espresso-idling-concurrent": "com.android.support.test.espresso.idling:idling-concurrent:$supportEspressoVersion",
+            "espresso-idling-net": "com.android.support.test.espresso.idling:idling-net:$supportEspressoVersion",
+            "espresso-accessibility": "com.android.support.test.espresso:espresso-accessibility:$supportEspressoVersion",
+            "espresso-contrib": "com.android.support.test.espresso:espresso-contrib:$supportEspressoVersion",
+            "espresso-idling-resource": "com.android.support.test.espresso:espresso-idling-resource:$supportEspressoVersion",
+            "espresso-intents": "com.android.support.test.espresso:espresso-intents:$supportEspressoVersion",
+            "espresso-remote": "com.android.support.test.espresso:espresso-remote:$supportEspressoVersion",
+            "espresso-web": "com.android.support.test.espresso:espresso-web:$supportEspressoVersion"
+    ]
+}
